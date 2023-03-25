@@ -9,9 +9,9 @@ self.addEventListener('install', (event) => {
           '/icon-512x512.png',
           '/sketch.js',
           '/choro2.mp3',
-          'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js',
-          'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js',
-          'https://unpkg.com/ml5@latest/dist/ml5.min.js',
+          '/p5.js',
+          '/p5.sound.min.js',
+          '/ml5.min.js',
         ]);
       })
     );

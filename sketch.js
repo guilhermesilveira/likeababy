@@ -6,6 +6,15 @@ let predictions = [];
 let debug = false;
 
 function preload() {
+  const urlParams = new URLSearchParams(window.location.search);
+  
+  // Check if the 'debug' parameter is present and set to 'true'
+  if (urlParams.has('debug') && urlParams.get('debug') === 'true') {
+    debug = true;
+  }
+  
+  log(`Debugging is enabled: ${debug}`);
+  log("Ready to load sound");
   mySound = loadSound('choro2.mp3');
 }
 
@@ -13,7 +22,7 @@ function log(msg) {
   if(debug) {
     console.log(msg);
   }
-  select('#status').html(msg);
+  document.getElementById('status').innerHTML = msg;
 }
 
 function cry() {
@@ -26,17 +35,8 @@ function cry() {
 }
 
 function setup() {
-  
-  const urlParams = new URLSearchParams(window.location.search);
-  
-  // Check if the 'debug' parameter is present and set to 'true'
-  if (urlParams.has('debug') && urlParams.get('debug') === 'true') {
-    debug = true;
-  }
-  
-  // Use the debug flag to enable or disable debugging output
-  log(`Debugging is enabled: ${debug}`);
-  
+  log("setup() started");
+
   createCanvas(640, 480);
   video = createCapture(VIDEO);
   video.size(width, height);
