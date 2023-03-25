@@ -2,16 +2,16 @@ self.addEventListener('install', (event) => {
     event.waitUntil(
       caches.open('baby-cache-v1').then((cache) => {
         return cache.addAll([
-          '/',
-          '/index.html',
-          '/manifest.json',
-          '/icon-192x192.png',
-          '/icon-512x512.png',
-          '/sketch.js',
-          '/choro2.mp3',
-          '/p5.js',
-          '/p5.sound.min.js',
-          '/ml5.min.js',
+          '',
+          'index.html',
+          'manifest.json',
+          'icon-192x192.png',
+          'icon-512x512.png',
+          'sketch.js',
+          'choro2.mp3',
+          'p5.js',
+          'p5.sound.min.js',
+          'ml5.min.js',
         ]);
       })
     );
