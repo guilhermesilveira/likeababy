@@ -12,8 +12,8 @@ function preload() {
 function log(msg) {
   if(debug) {
     console.log(msg);
-    select('#status').html(msg);
   }
+  select('#status').html(msg);
 }
 
 function cry() {
