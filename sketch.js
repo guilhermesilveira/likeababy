@@ -20,6 +20,7 @@ function cry() {
   // Play the sound
     if (!mySound.isPlaying()) {
       // Play the sound
+      log("Crying from start");
       mySound.play();
     }
 }
@@ -34,7 +35,7 @@ function setup() {
   }
   
   // Use the debug flag to enable or disable debugging output
-  log('Debugging is enabled!');
+  log(`Debugging is enabled: ${debug}`);
   
   createCanvas(640, 480);
   video = createCapture(VIDEO);
