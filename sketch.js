@@ -58,7 +58,7 @@ let lastMoment = -1000 * 1000;
 let chorou = true;
 
 function draw() {
-  background(255);
+  background(0);
   if(debug){
     image(video, 0, 0, width, height);
   }
